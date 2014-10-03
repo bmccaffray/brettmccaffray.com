@@ -1,0 +1,98 @@
+/* colors
+img links:
+
+https://unsplash.imgix.net/44/HsQM7Jd2Qlysfyk9SgvX_logarska-valley-5.jpg?q=75&fm=jpg&auto=format&s=3dfa9a13b6fdf5b9b0bbb46eac4b6546
+
+https://unsplash.imgix.net/46/iYvDeqVGRbebiQv2PIJi_DSC_8407.JPG?q=75&fm=jpg&auto=format&s=6fb0462bfb28087768cf7c44520d2eb0
+
+http://gratisography.com/pictures/101H.jpg
+
+http://www.lifeofpix.com/wp-content/uploads/2014/09/life-of-pix-free-stock-photos-New-York-high-line-texture-night-light.jpg
+
+*/
+
+$dblue: #212B3F; /* dark blue rgb(33, 43, 63) */
+$lblue: #1D2E5D; /* light blue rgb(29, 46, 93) */
+$lgray: #383C45; /* light gray rgb(56, 60, 69) */
+$lgrayblue: #636E85; /* light gray blue rgb(99, 110, 133) */
+$llgrayblue: #99ABD1; /* light light gray blue rgb(153, 171, 209) */
+$bblue: #61D6FA; /* baby blue rgb(97, 214, 250) */
+$dbblue: #7CB9CC; /* dark baby blue rgb(124, 185, 204) */
+
+body {
+    background: url('https://unsplash.imgix.net/46/iYvDeqVGRbebiQv2PIJi_DSC_8407.JPG?q=75&fm=jpg&auto=format&s=6fb0462bfb28087768cf7c44520d2eb0') center center no-repeat;
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay {
+    background: rgba($lgray, .5);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.nav {
+    margin: 15% 20%;
+}
+
+.box {
+    float: left;
+    transform: rotate(45deg);
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px #444;
+}
+.boxBg {
+    position: relative;
+    width: 200%;
+    height: 200%;
+    top: -100%;
+    left: -20%;
+    z-index: -1;
+    background: url('http://gratisography.com/pictures/38n.jpg') no-repeat;
+    background-size: 100%;
+    transform: rotate(-45deg);
+}
+
+.square {
+    position: relative;
+    display: inline-flex;
+    width: 125px;
+    height: 125px;
+    background-image: -webkit-linear-gradient(top left, rgba($lgrayblue, 1) 50%, rgba($lblue, 0) 95%);
+    background-image: -moz-linear-gradient(top left, rgba($lgrayblue, 1) 50%, rgba($lblue, 0) 95%);
+    background-image: -o-linear-gradient(top left, rgba($lgrayblue, 1) 50%, rgba($lblue, 0) 95%);
+    background-image: linear-gradient(to bottom right, rgba($lgrayblue, 1) 50%, rgba($lblue, 0) 90%);
+    padding: 5px;
+}
+.squareBg {
+    width: 125px;
+    height: 125px;
+    background-color: rgba($dblue, 1);
+}
+.square label {
+    position: absolute;
+    transform: rotate(-45deg);
+    color: rgba($lgrayblue, 1);
+    margin: 41% 36%;
+}
+
+.square.rotate{
+    float: left;
+    transform: rotate(45deg);
+    margin: 175px 0;
+}
+
+.square:hover {
+    background-image: -webkit-linear-gradient(top left, rgba($bblue, 1) 50%, rgba($lblue, 0) 95%);
+    background-image: -moz-linear-gradient(top left, rgba($bblue, 1) 50%, rgba($lblue, 0) 95%);
+    background-image: -o-linear-gradient(top left, rgba($bblue, 1) 50%, rgba($lblue, 0) 95%);
+    background-image: linear-gradient(to bottom right, rgba($bblue, 1) 50%, rgba($lblue, 0) 90%);
+    padding: 5px;
+}
+.square:hover label {
+    color: rgba($dbblue, 1);
+}

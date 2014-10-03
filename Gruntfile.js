@@ -35,7 +35,7 @@ module.exports = function(grunt){
 		sass: {
 			build: {
 				files: {
-					'build/style.css': 'css/*.scss'
+					'build/css/style.css': 'css/*.scss'
 				}
 			}
 		},
@@ -59,6 +59,6 @@ module.exports = function(grunt){
 		}
 	});
 
-	grunt.registerTask('build:design', ['clean:design', 'copy:design']);
+	grunt.registerTask('build:design', ['clean:design', 'copy:design', 'sass']);
 	grunt.registerTask('design', ['build:design', 'express:design', 'watch:design']);
 };
