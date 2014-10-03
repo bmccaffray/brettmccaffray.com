@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bmccaffray/brettmccaffray.com/issues"
   },
-  "homepage": "https://github.com/bmccaffray/brettmccaffray.com"
+  "homepage": "https://github.com/bmccaffray/brettmccaffray.com",
+  "dependencies": {
+    "express": "^4.9.5"
+  }
 }
