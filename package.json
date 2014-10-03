@@ -1,0 +1,19 @@
+{
+  "name": "brettmccaffray.com",
+  "version": "1.0.0",
+  "description": "Personal Website and Blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmccaffray/brettmccaffray.com.git"
+  },
+  "author": "brett mccaffray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bmccaffray/brettmccaffray.com/issues"
+  },
+  "homepage": "https://github.com/bmccaffray/brettmccaffray.com"
+}
