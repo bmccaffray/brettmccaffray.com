@@ -59,5 +59,6 @@ module.exports = function(grunt){
 		}
 	});
 
-	grunt.registerTask('build:design', ['clean:design', 'copy:design', 'express:design', 'watch:design']);
+	grunt.registerTask('build:design', ['clean:design', 'copy:design']);
+	grunt.registerTask('design', ['build:design', 'express:design', 'watch:design']);
 };
