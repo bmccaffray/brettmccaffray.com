@@ -20,14 +20,14 @@ module.exports = function(grunt){
 			design: {
 				expand: true,
 				cwd: 'build/',
-				src: ['*.html', 'css/*.css', 'css/*.scss']
+				src: ['*.html', 'css/*.css', 'css/*.scss', 'images/*']
 			}
 		},
 		copy: {
 			design: {
 				expand: true,
 				cwd: '',
-				src: ['*.html', 'css/*.css'],
+				src: ['*.html', 'css/*.css', 'images/*'],
 				dest: 'build/',
 				filter: 'isFile'
 			}
@@ -53,7 +53,7 @@ module.exports = function(grunt){
 		},
 		watch: {
 			design: {
-				files: ['server.js', '*.html', 'css/*.scss'],
+				files: ['server.js', '*.html', 'css/*.scss', 'images/*', 'Gruntfile.js'],
 				tasks: ['build:design']
 			}
 		}

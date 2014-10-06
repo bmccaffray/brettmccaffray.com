@@ -1,15 +1,4 @@
-/* colors
-img links:
-
-https://unsplash.imgix.net/44/HsQM7Jd2Qlysfyk9SgvX_logarska-valley-5.jpg?q=75&fm=jpg&auto=format&s=3dfa9a13b6fdf5b9b0bbb46eac4b6546
-
-https://unsplash.imgix.net/46/iYvDeqVGRbebiQv2PIJi_DSC_8407.JPG?q=75&fm=jpg&auto=format&s=6fb0462bfb28087768cf7c44520d2eb0
-
-http://gratisography.com/pictures/101H.jpg
-
-http://www.lifeofpix.com/wp-content/uploads/2014/09/life-of-pix-free-stock-photos-New-York-high-line-texture-night-light.jpg
-
-*/
+// Brett McCaffray
 
 $dblue: #212B3F; /* dark blue rgb(33, 43, 63) */
 $lblue: #1D2E5D; /* light blue rgb(29, 46, 93) */
@@ -20,10 +9,14 @@ $bblue: #61D6FA; /* baby blue rgb(97, 214, 250) */
 $dbblue: #7CB9CC; /* dark baby blue rgb(124, 185, 204) */
 
 body {
-    background: url('https://unsplash.imgix.net/46/iYvDeqVGRbebiQv2PIJi_DSC_8407.JPG?q=75&fm=jpg&auto=format&s=6fb0462bfb28087768cf7c44520d2eb0') center center fixed no-repeat;
+    //background: url('../images/sky.jpg') center center fixed no-repeat;
+    // background: url('../images/mountain.jpg') center center fixed no-repeat;
+    background: url('../images/walkway.jpg') center center fixed no-repeat;
+    // background: url('../images/lake.jpg') center center fixed no-repeat;
     background-size: 100%;
     margin: 0;
     padding: 0;
+    color: #fff;
 }
 
 .overlay {
@@ -33,8 +26,13 @@ body {
     width: 100%;
 }
 
+.title {
+    margin-top: 100px;
+    font-size: 64px;
+}
+
 .nav {
-    margin: 350px auto;
+    margin: 150px auto;
     width: 900px;
 }
 
@@ -76,10 +74,34 @@ body {
     }
 
     label {
+
+        margin: 41% 36%;
+    }
+
+    .icon {
         position: absolute;
         transform: rotate(-45deg);
-        color: rgba($lgrayblue, 1);
-        margin: 41% 36%;
+        fill: $lgrayblue;
+    }
+    .about {
+        margin: 22% 19%;
+        width: 68px;
+        height: 68px;
+    }
+    .projects {
+        margin: 25% 24%;
+        width: 60px;
+        height: 60px;
+    }
+    .resume {
+        margin: 15% 13%;
+        width: 88px;
+        height: 88px;
+    }
+    .contact {
+        margin: 20% 21%;
+        width: 68px;
+        height: 68px;
     }
 }
 
@@ -97,8 +119,8 @@ body {
 .square:hover {
     background-color: $dbblue;
 
-    label {
-        color: rgba($dbblue, 1);
+    .icon {
+        fill: $dbblue;
     }
 }
 
@@ -135,6 +157,11 @@ body {
 }
 .boxBg.bot {
     top: -150%;
+}
+
+.slogan {
+    margin-top: -150px;
+    font-size: 32px;
 }
 
 .content {
