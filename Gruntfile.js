@@ -39,6 +39,12 @@ module.exports = function(grunt){
 				}
 			}
 		},
+		// jshint: {
+		// 	all: allJavaScriptFilePaths,
+		// 	options: {
+		// 		jshintrc: true
+		// 	}
+		// },
 		express: {
 			dev: {
 				options: {
