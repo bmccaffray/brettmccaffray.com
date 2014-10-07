@@ -5,8 +5,41 @@
 	<title>Brett McCaffray</title>
 	<link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function (){
+			var img_array = ['lake', 'mountain', 'sky'],
+			newIndex = 0,
+			index = 0,
+			interval = 10000;
+
+			function shuffle(o){
+				for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+					return o;
+			};
+
+			img_array = shuffle(img_array);
+
+			(function changeBg() {
+				index = (index + 1) % img_array.length;
+
+				$('body').css('backgroundImage', function () {
+					return 'url(images/' + img_array[index] + '.jpg)';
+				});
+
+				$('.bg').fadeOut(5000, function(){
+					$(this).css({
+						backgroundImage: 'url(images/' + img_array[index] + '.jpg)'
+					}).show();
+				} );
+
+				setTimeout(changeBg, interval);
+			})();
+		});
+	</script>
 </head>
 <body>
+	<div class="bg"></div>
 	<div class="overlay">
 		<div class="container_12">
 			<div class="title">
