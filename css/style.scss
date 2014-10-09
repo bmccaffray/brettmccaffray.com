@@ -69,7 +69,7 @@ a:hover {
     height: 250px;
     margin: 0 0 12% 0;
     overflow: hidden;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 10px 10px 33px rgba(0, 0, 0, 0.25);
 
     .boxBg {
         position: relative;
@@ -78,9 +78,15 @@ a:hover {
         top: -100%;
         left: -20%;
         z-index: -1;
+        transform: rotate(-45deg);
+    }
+    .boxBg.first {
         background: url('http://gratisography.com/pictures/38n.jpg') no-repeat;
         background-size: 100%;
-        transform: rotate(-45deg);
+    }
+    .boxBg.second {
+        background: url('http://gratisography.com/pictures/38n.jpg') no-repeat;
+        background-size: 100%;
     }
 }
 
@@ -148,7 +154,7 @@ a:hover {
     float: left;
     transform: rotate(45deg);
     margin: -25px 25px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 10px 10px 33px rgba(0, 0, 0, 0.25);
 }
 
 .square.rotate.first{
@@ -234,15 +240,21 @@ a:hover {
         }
     }
     .section.projects {
-        a {
-            display: block;
-            width: 18%;
-            margin: 3% 1% 0;
-            float: left;
+        text-align: center;
 
-            img {
-                width: 100%;
-            }
+        .project {
+            margin-top: 5%;
+        }
+        a {
+            // display: block;
+            // margin: 3% 1% 0;
+            // float: left;
+        }
+        img {
+            width: 100%;
+        }
+        .linkcolor {
+            color: $dbblue;
         }
     }
     .clear.line {
