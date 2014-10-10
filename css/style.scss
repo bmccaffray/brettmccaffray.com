@@ -59,7 +59,7 @@ a:hover {
     height: 250px;
     margin: 0 0 12% 0;
     overflow: hidden;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 10px 10px 33px rgba(0, 0, 0, 0.25);
 
     .boxBg {
         position: relative;
@@ -69,8 +69,8 @@ a:hover {
         left: -20%;
         z-index: -1;
         background: url('../images/city.jpg') no-repeat;
-        background-size: 100%;
         transform: rotate(-45deg);
+        background-size: 100%;
     }
 }
 
@@ -147,7 +147,7 @@ a:hover {
     float: left;
     transform: rotate(45deg);
     margin: -25px 25px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 10px 10px 33px rgba(0, 0, 0, 0.25);
 }
 
 .square.rotate.first{
