@@ -8,10 +8,8 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function (){
-			var img_array = ['lake', 'mountain', 'sky'],
-			newIndex = 0,
-			index = 0,
-			interval = 10000;
+			var img_array = ['lake', 'mountain', 'sky'];
+			var index = 0;
 
 			function shuffle(o){
 				for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -20,21 +18,13 @@
 
 			img_array = shuffle(img_array);
 
-			(function changeBg() {
-				index = (index + 1) % img_array.length;
-
+			function setBg(){
 				$('body').css('backgroundImage', function () {
 					return 'url(images/' + img_array[index] + '.jpg)';
 				});
+			};
 
-				$('.bg').fadeOut(5000, function(){
-					$(this).css({
-						backgroundImage: 'url(images/' + img_array[index] + '.jpg)'
-					}).show();
-				} );
-
-				setTimeout(changeBg, interval);
-			})();
+			setBg();
 		});
 	</script>
 </head>
@@ -64,7 +54,7 @@
 							<div class="squareBg"></div>
 						</div>
 					</a>
-					<div class="boxBg"></div>
+					<div class="boxBg first"></div>
 				</div>
 
 				<a href="#projects">
@@ -144,7 +134,7 @@
 							<div class="squareBg"></div>
 						</div>
 					</a>
-					<div class="boxBg bot"></div>
+					<div class="boxBg second bot"></div>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -169,26 +159,58 @@
 
 			<div id="projects" class="section projects grid_10 prefix_1">
 				<h1>Projects</h1>
-				<a href="https://github.com/bmccaffray/BreakApp" target="_blank">
-					Angular Blog
-					<img src="images/profile.jpg"/>
-				</a>
-				<a href="https://github.com/bmccaffray/BreakApp" target="_blank">
-					Yeoman Gen
-					<img src="images/profile.jpg"/>
-				</a>
-				<a href="https://github.com/bmccaffray/brettmccaffray.com" target="_blank">
-					Personal Website
-					<img src="images/profile.jpg"/>
-				</a>
-				<a href="https://github.com/bmccaffray/BreakApp" target="_blank">
-					Break App
-					<img src="images/profile.jpg"/>
-				</a>
-				<a href="https://github.com/bmccaffray/along-the-way" target="_blank">
-					Along the Way
-					<img src="images/profile.jpg"/>
-				</a>
+
+				<div class="project grid_5 prefix_1">
+					<span class="linkcolor">Angular Blog (work in progress)</span><br/><br/>
+					An angularjs CRUD app centered around blog entries for personal website.
+				</div>
+				<div class="project grid_5 suffix_1">
+					<img src="images/angularblog.png"/>
+				</div>
+				<div class="clear"></div>
+
+				<div class="project grid_5 prefix_1">
+					<span class="linkcolor">Yeoman Gen (work in progress)</span><br/><br/>
+					text
+				</div>
+				<div class="project grid_5 suffix_1">
+					<img src="images/yeomangen.png"/>
+				</div>
+				<div class="clear"></div>
+
+
+				<div class="project grid_5 prefix_1">
+					<a href="https://github.com/bmccaffray/brettmccaffray.com" target="_blank">Personal Website</a><br/><br/>
+					text
+				</div>
+				<div class="project grid_5 suffix_1">
+					<a href="https://github.com/bmccaffray/brettmccaffray.com" target="_blank">
+						<img src="images/profile.jpg"/>
+					</a>
+				</div>
+				<div class="clear"></div>
+
+				<div class="project grid_5 prefix_1">
+					<a href="https://github.com/bmccaffray/BreakApp" target="_blank">Break App</a><br/><br/>
+					text
+				</div>
+				<div class="project grid_5 suffix_1">
+					<a href="https://github.com/bmccaffray/BreakApp" target="_blank">
+						<img src="images/breakapp.png"/>
+					</a>
+				</div>
+				<div class="clear"></div>
+
+				<div class="project grid_5 prefix_1">
+					<a href="https://github.com/bmccaffray/along-the-way" target="_blank">Along the Way</a><br/><br/>
+					text
+				</div>
+				<div class="project grid_5 suffix_1">
+					<a href="https://github.com/bmccaffray/along-the-way" target="_blank">
+						<img src="images/alongtheway.png"/>
+					</a>
+				</div>
+				<div class="clear"></div>
 			</div>
 			<div class="clear line"></div>
 
