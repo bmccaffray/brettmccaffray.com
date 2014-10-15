@@ -7,30 +7,23 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script>
-		// $(document).ready(function (){
-		// 	var img_array = ['lake', 'mountain', 'sky'];
-		// 	var index = 0;
-
-		// 	function shuffle(o){
-		// 		for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-		// 			return o;
-		// 	};
-
-		// 	img_array = shuffle(img_array);
-
-		// 	function setBg() {
-		// 		index = (index + 1) % img_array.length;
-
-		// 		$('body').css('backgroundImage', function () {
-		// 			return 'url(images/' + img_array[index] + '.jpg)';
-		// 		});
-		// 	}
-
-		// 	setBg();
-		// });
+		$(document).ready(function (){
+			$('.mobileBtn, .mobileMenu li').click(function(){
+				$('.mobileMenu').toggleClass('show');
+			});
+		});
 	</script>
 </head>
 <body>
+	<button class="mobileBtn">&#9776;</button>
+	<div class="mobileMenu">
+		<ul>
+			<a href="#about"><li>About</li></a>
+			<a href="#projects"><li>Projects</li></a>
+			<a href="images/BrettMcCaffrayResume.pdf"><li>Resume</li></a>
+			<a href="#contact"><li>Contact</li></a>
+		</ul>
+	</div>
 	<div class="overlay">
 		<div class="container_12">
 			<div class="title">
