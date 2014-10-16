@@ -7,30 +7,23 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script>
-		// $(document).ready(function (){
-		// 	var img_array = ['lake', 'mountain', 'sky'];
-		// 	var index = 0;
-
-		// 	function shuffle(o){
-		// 		for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-		// 			return o;
-		// 	};
-
-		// 	img_array = shuffle(img_array);
-
-		// 	function setBg() {
-		// 		index = (index + 1) % img_array.length;
-
-		// 		$('body').css('backgroundImage', function () {
-		// 			return 'url(images/' + img_array[index] + '.jpg)';
-		// 		});
-		// 	}
-
-		// 	setBg();
-		// });
+		$(document).ready(function (){
+			$('.mobileBtn, .mobileMenu li').click(function(){
+				$('.mobileMenu').toggleClass('show');
+			});
+		});
 	</script>
 </head>
 <body>
+	<button class="mobileBtn">&#9776;</button>
+	<div class="mobileMenu">
+		<ul>
+			<a href="#about"><li>About</li></a>
+			<a href="#projects"><li>Projects</li></a>
+			<a href="images/BrettMcCaffrayResume.pdf"><li>Resume</li></a>
+			<a href="#contact"><li>Contact</li></a>
+		</ul>
+	</div>
 	<div class="overlay">
 		<div class="container_12">
 			<div class="title">
@@ -163,7 +156,8 @@
 
 				<div class="project grid_6">
 					<h3>
-						Angular Blog (work in progress)
+						Angular Blog<br/>
+						(work in progress)
 					</h3>
 					A CRUD app centered around blog entries.<br/>
 					(AngularJS, Node.js, MongoDB)
@@ -171,11 +165,12 @@
 				<div class="project grid_6">
 					<img src="images/angularblog.png"/>
 				</div>
-				<div class="clear"></div>
+				<div class="clear line"></div>
 
 				<div class="project grid_6">
 					<h3>
-						Yeoman Gen (work in progress)
+						Yeoman Gen<br/>
+						(work in progress)
 					</h3>
 					A yeoman generator that builds the necessary file structure for a web application.<br/>
 					(Yeoman)
@@ -183,12 +178,12 @@
 				<div class="project grid_6">
 					<img src="images/yeomangen.png"/>
 				</div>
-				<div class="clear"></div>
+				<div class="clear line"></div>
 
 				<div class="project grid_6">
 					<a href="https://github.com/bmccaffray/brettmccaffray.com" target="_blank">
 						Personal Website
-					</a><br/>
+					</a><br/><br/>
 					Personal website to show off resume and portfolio.<br/>
 					(HTML, CSS, JavaScript, Node.js)
 				</div>
@@ -197,7 +192,7 @@
 						<img src="images/personalsite.png"/>
 					</a>
 				</div>
-				<div class="clear"></div>
+				<div class="clear line"></div>
 
 				<div class="project grid_6">
 					<a href="https://github.com/bmccaffray/BreakApp" target="_blank">
@@ -211,7 +206,7 @@
 						<img src="images/breakapp.png"/>
 					</a>
 				</div>
-				<div class="clear"></div>
+				<div class="clear line"></div>
 
 				<div class="project grid_6">
 					<a href="https://github.com/bmccaffray/along-the-way" target="_blank">

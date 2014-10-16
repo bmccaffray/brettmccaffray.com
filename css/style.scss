@@ -35,6 +35,53 @@ a:hover {
     color: #aaa;
 }
 
+.mobileBtn {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: $lgrayblue;
+    border: none;
+    z-index: 42;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.mobileMenu {
+    display: none;
+    position: fixed;
+    z-index: 33;
+    background: $lgrayblue;
+    margin-left: 50px;
+    width: 75%;
+    text-align: center;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            height: 50px;
+            border-bottom: 1px solid $lgray;
+            border-right: 1px solid $lgray;
+            border-left: 1px solid $lgray;
+            padding-top: 25px;
+        }
+    }
+
+    &.show {
+        display: block;
+    }
+}
+
 .overlay {
     background: rgba($lgray, .80);
     overflow: hidden;
@@ -230,7 +277,8 @@ a:hover {
     .section.projects {
         .project {
             text-align: center;
-            margin-top: 8%;
+            margin-top: 5%;
+            margin-bottom: 4%;
 
             a {
                 font-weight: 400;
@@ -241,10 +289,17 @@ a:hover {
                 font-size: 28px;
             }
         }
+        .clear.line {
+            height: 1px;
+            width: 50%;
+            margin-left: 25%;
+            background: $lgraygreen;
+            opacity: 0.5;
+            visibility: visible;
+        }
 
         img {
             width: 80%;
-            margin: 0 10%;
         }
     }
     .clear.line {
@@ -257,5 +312,112 @@ a:hover {
 }
 
 @media(max-width: 950px){
+    .mobileBtn {
+        display: block;
+    }
 
+    .nav {
+        display: none;
+    }
+
+    .title {
+        margin: 10% 15% 0%;
+    }
+
+    .slogan {
+        margin: 10% 0;
+        padding-left: 50%;
+    }
+
+    .content {
+        .section.projects {
+            .project {
+                width: 100%;
+                margin-top: 4%;
+                margin-bottom: 4%;
+            }
+            .clear.line {
+                width: 76%;
+                margin-left: 12%;
+            }
+
+            img {
+                width: 50%;
+                margin-top: -4%;
+            }
+        }
+    }
+}
+
+@media(max-width: 750px){
+    .title {
+        font-size: 52px;
+    }
+
+    .slogan {
+        padding-left: 30%;
+    }
+
+    .content {
+        .section.projects {
+            .project {
+                margin-top: 8%;
+                margin-bottom: 8%;
+            }
+
+            img {
+                width: 70%;
+                margin-top: -8%;
+            }
+        }
+    }
+}
+
+@media(max-width: 500px){
+    .title {
+        font-size: 44px;
+    }
+
+    .slogan {
+        padding-left: 20%;
+    }
+
+    .content {
+        .section.projects {
+            .project {
+                margin-top: 12%;
+                margin-bottom: 12%;
+            }
+
+            img {
+                margin-top: -12%;
+            }
+        }
+    }
+}
+
+@media(max-width: 450px){
+    .title {
+        width: 75%;
+        line-height: 44px;
+    }
+
+    .slogan {
+        width: 75%;
+    }
+}
+
+@media(max-width: 400px){
+    .content {
+        .section.projects {
+            .project {
+                margin-top: 16%;
+                margin-bottom: 16%;
+            }
+
+            img {
+                margin-top: -16%;
+            }
+        }
+    }
 }
