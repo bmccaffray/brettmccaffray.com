@@ -14,13 +14,13 @@ module.exports = function(grunt){
 
 	grunt.initConfig({
 		clean: {
-			dev: {
-				src: 'build/'
-			},
 			design: {
 				expand: true,
 				cwd: 'build/',
-				src: ['*.html', 'css/*.css', 'css/*.scss', 'images/*']
+				src: ['*.html', 'css/*.css', 'images/*']
+			},
+			dist: {
+				src: 'build/'
 			}
 		},
 		copy: {
@@ -30,13 +30,13 @@ module.exports = function(grunt){
 				src: ['*.html', 'css/*.css', 'images/*'],
 				dest: 'build/',
 				filter: 'isFile'
-			}
-		},
-		sass: {
-			build: {
-				files: {
-					'build/css/style.css': 'css/*.scss'
-				}
+			},
+			dist: {
+				expand: true,
+				cwd: '',
+				src: ['images/*'],
+				dest: 'build/',
+				filter: 'isFile'
 			}
 		},
 		// jshint: {
@@ -45,6 +45,45 @@ module.exports = function(grunt){
 		// 		jshintrc: true
 		// 	}
 		// },
+		sass: {
+			build: {
+				files: {
+					'build/css/style.css': 'css/*.scss'
+				}
+			},
+			dist: {
+				files: {
+					'css/style.css': 'css/*.scss'
+				}
+			}
+		},
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: [{
+					expand: true,
+					cwd: '',
+					src: ['*.html'],
+					dest: 'build/'
+				}]
+			}
+		},
+		cssmin: {
+			dist: {
+				options: {
+					keepSpecialComments: 0
+				},
+				files: [{
+					expand: true,
+					cwd: 'css/',
+					src: ['*.css'],
+					dest: 'build/css/'
+				}]
+			}
+		},
 		express: {
 			dev: {
 				options: {
@@ -65,6 +104,7 @@ module.exports = function(grunt){
 		}
 	});
 
-	grunt.registerTask('build:design', ['clean:design', 'copy:design', 'sass']);
+	grunt.registerTask('build:design', ['clean:design', 'sass:build', 'copy:design']);
 	grunt.registerTask('design', ['build:design', 'express:design', 'watch:design']);
+	grunt.registerTask('build:dist', ['clean:dist', 'sass:dist', 'htmlmin:dist', 'cssmin:dist', 'copy:dist']);
 };
