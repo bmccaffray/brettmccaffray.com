@@ -1,5 +1,8 @@
 node_modules/
 build/
+css/style.css
+css/style.css.map
+css/
 .sass*
 .sass-cache/
 **/.sass-cache/*
