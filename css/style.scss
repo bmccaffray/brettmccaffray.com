@@ -48,6 +48,8 @@ a:hover {
     font-size: 28px;
     cursor: pointer;
     color: #fff;
+    margin: 0;
+    padding: 0;
 
     &:focus {
         outline: none;
@@ -419,5 +421,12 @@ a:hover {
                 margin-top: -16%;
             }
         }
+    }
+}
+
+@media(max-width: 315px){
+    .mobileBtn {
+        width: 40px;
+        height: 40px;
     }
 }
