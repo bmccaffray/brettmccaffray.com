@@ -48,11 +48,6 @@ module.exports = function(grunt){
 		sass: {
 			build: {
 				files: {
-					'build/css/style.css': 'css/*.scss'
-				}
-			},
-			dist: {
-				files: {
 					'css/style.css': 'css/*.scss'
 				}
 			}
@@ -106,5 +101,5 @@ module.exports = function(grunt){
 
 	grunt.registerTask('build:design', ['clean:design', 'sass:build', 'copy:design']);
 	grunt.registerTask('design', ['build:design', 'express:design', 'watch:design']);
-	grunt.registerTask('build:dist', ['clean:dist', 'sass:dist', 'htmlmin:dist', 'cssmin:dist', 'copy:dist']);
+	grunt.registerTask('build:dist', ['clean:dist', 'sass:build', 'htmlmin:dist', 'cssmin:dist', 'copy:dist']);
 };
