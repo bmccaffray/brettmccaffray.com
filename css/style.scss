@@ -300,6 +300,59 @@ a:hover {
                 font-weight: 400;
                 font-size: 28px;
             }
+
+            .imgContainer{
+                position: relative;
+                overflow: hidden;
+                height: 325px;
+                //border: 1px solid $lgraygreen;
+
+                img {
+                    -webkit-transition: all .5s;
+                    -moz-transition: all .5s;
+                    -ms-transition: all .5s;
+                    -o-transition: all .5s;
+                    transition: all .5s;
+                    width: 100%;
+                }
+                &:hover img {
+                    -webkit-transform: translateY(-45px);
+                    -moz-transform: translateY(-45px);
+                    -ms-transform: translateY(-45px);
+                    -o-transform: translateY(-45px);
+                    transform: translateY(-45px);
+                }
+
+                &:hover .imgInfo {
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    -ms-transform: translateY(0);
+                    -o-transform: translateY(0);
+                    transform: translateY(0);
+                }
+
+                .imgInfo {
+                    background: #777;
+                    width: 100%;
+                    padding: 10px 0;
+                    bottom: 0;
+                    position: absolute;
+                    -webkit-transform: translateY(100%);
+                    -moz-transform: translateY(100%);
+                    -ms-transform: translateY(100%);
+                    -o-transform: translateY(100%);
+                    transform: translateY(100%);
+                    -webkit-transition: all .5s;
+                    -moz-transition: all .5s;
+                    -ms-transition: all .5s;
+                    -o-transition: all .5s;
+                    transition: all .5s;
+
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
         }
         .clear.line {
             height: 1px;
@@ -308,10 +361,6 @@ a:hover {
             background: $lgraygreen;
             opacity: 0.5;
             visibility: visible;
-        }
-
-        img {
-            width: 80%;
         }
     }
     .clear.line {
